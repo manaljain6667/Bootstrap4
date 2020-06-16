@@ -1,0 +1,62 @@
+//********************************************************************************************************************************//
+since Bootstrap is dependent upon both jQuery and Popper in that order, so We will first input jQuery.
+And then after that, we input Popper, and then finally, Bootstrap min.js at the bottom of the index.html file.
+Now, this is included at the bottom of the page. 
+Because when you are loading the page from a web server, 
+you want the CSS classes to be loaded immediately so that as the page starts rendering, 
+when the JavaScript is fetched, the JavaScript needs to execute in order to make changes to your page with the JavaScript code, 
+and that will take a little bit of time. 
+So you don't want the user to be waiting for the entire page to be loaded before they see something in their browser window. 
+So that's why we normally load the JavaScript classes towards the end of our html page just before the body tech.
+//*********************************************************************************************************************************//
+
+//*********************************************************************************************************************************//
+Foundation for Responsive Design
+ 1.Grid System
+   • Designed to be:
+    – Responsive
+    – Mobile first
+    – Fluid
+ 2.Fluid images
+   your images that you include in your website will automatically adapt itself to the screen size
+ 3.media queries
+   the technology allows you to do a media query to specify the minimum width of the screen under which this particular 
+   set of CSS classes will be active. So this would be specified in your CSS file as
+   eg,  @media (min-width:992px){ 
+          /* CSS styles customized for desktop
+        }
+    doing media queries, your web UI framework is able to establish what kind of device you're rendering your website on.
+    And correspondingly adjust the CSS classes to fit that particular devices screen size.
+//********************************************************************************************************************************//
+
+//*******************************************************************************************************************************//
+      Viewport
+  <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+• The viewport meta tag:
+– Ensures that the screen width is set to the device width and the content is rendered with this width in mind
+– Designing the websites to be responsive to the size of the viewport
+• Bootstrap grid system
+
+//******************************************************************************************************************************//
+
+//******************************************************************************************************************************//
+CSS Flexbox Layout
+• Simpler and flexible layout options in CSS
+• Can easily handle dynamic/unknown size of content containers
+• Direction-agnostic Layout
+
+Why Flexbox for Bootstrap?
+• Easy vertical alignment of content within a parent element
+• Easy reordering of content across devices and screen resolutions with the help of media queries
+• Easy CSS-only equal height columns for your gridbased layouts
+
+Bootstrap Grid 
+• Bootstrap makes available five classes
+– default targets all screen sizes from extra small to extra large,
+– sm for small,
+– md for medium,
+– lg for large, and
+– xl for extra large screen sizes
+• Each row in Bootstrap grid system is divided into 12 columns
+• Use the classes .col-*, .col-sm-*, col-md-*, and .col-lg-* for defining the layouts for the various screen sizes
+• Specify how many columns each piece of content will occupy within a row, all adding up to 12 or a multiple thereof
