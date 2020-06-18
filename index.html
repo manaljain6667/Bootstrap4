@@ -14,6 +14,48 @@
 </head>
 
 <body>
+    <!--  the nav HTML tag is intended for providing navigation -->
+    <!--  the navbar class in bootstrap allows me to create a navigation bar. -->
+    <!-- navbar-expand-sm, that means that for small and extra small screens, this navbars will become a toggle-able navbar. 
+         Meaning that, it will be collapsed in those screen sizes. -->
+    <!--bg-primary is that primary color that is defined in your bootstrap  -->
+    <!-- fixed-top does, is it fixes the navigation bar to the top of the browser window where this web page is being rendered -->
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+
+        <div class="container">
+
+            <!-- We would like the navigation bar elements to collapse for shorter screens, 
+        to be replaced by a toggle button so that the items can be toggled on or off when required on small and extra small screens. 
+        This can be achieved by adding the following code to the navigation bar -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- This creates a button with three horizontal lines. For medium to extra large screens, this button is hidden. 
+        For small and extra small screens, this button becomes visible. This button will act as the toggle for the navbar items. -->
+
+            <a class="navbar-brand" href="#">Ristorante Con Fusion</a>
+
+            <!-- To hide the items from the navigation bar for the small screens, we need to enclose the ul with collapse and navbar-collapse classes a -->
+            <div class="collapse navbar-collapse" id="Navbar">
+
+            <!-- navbar-nav is the class that is used to define the set of links that will be included in the navigation bar.
+         And these links will be displayed horizontally inside my navigation bar -->
+                <ul class="navbar-nav mr-auto">
+           <!-- The mr auto-class that we have applied to the ul, is used to specify the right margin. 
+                this is a utility class that is available in bootstrap that allows us to specify the right margin.
+                 So if we say, mr-auto, what it means is that on the right side, the right margin should be set as much as possible.
+                 So which means that the content will be pushed as left as possible within the navigation bar -->
+
+                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <!-- nav item allows these list items to be displayed horizontally as links in my navigation bar.  -->
+                </ul>
+            </div>
+
+        </div>
+    </nav>
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -21,7 +63,8 @@
                     <!-- col-12  means content of this div will occupy entire row in extra small screen devices
                          and col-sm-6 means it will occupy half of the width in small to large screen devices-->
                     <h1>Ristorante con Fusion</h1>
-                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our
+                        lipsmacking creations will tickle your culinary senses!</p>
                 </div>
                 <div class="col-12 col-sm-6">
                 </div>
@@ -32,17 +75,18 @@
     <div class="container">
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
-            <!-- col-12  means content of this div will occupy entire row in extra small screen devices 
+                <!-- col-12  means content of this div will occupy entire row in extra small screen devices 
                 col-sm-4 means it will occupy (1/3)rd of the width in small screen devices
                 col-md-3 means it will occupy (1/4)th of the width in medium to large screen devices-->
                 <h3>Our Lipsmacking Culinary Creations</h3>
             </div>
             <div class="col col-sm order-sm-first col-md">
-            <!-- col means the content of this div will be stacked below to upper div element and occupy entire row in extra small screen devices 
+                <!-- col means the content of this div will be stacked below to upper div element and occupy entire row in extra small screen devices 
                 col-sm means it will occupy remaining width of the row in small screen devices
                 col-md means it will occupy remaining width in medium to large screen devices-->
                 <h2>Uthappizza</h2>
-                <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives,
+                    ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
             </div>
         </div>
 
@@ -53,7 +97,9 @@
             </div>
             <div class="col col-sm col-md">
                 <h2>Weekend Grand Buffet</h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers,
+                    six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just
+                    $19.99 per person </p>
             </div>
         </div>
 
@@ -64,22 +110,24 @@
             <div class="col col-sm order-sm-first col-md">
                 <h2>Alberto Somayya</h2>
                 <h4>Executive Chef</h4>
-                <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                <p>Award winning three-star Michelin chef with wide International experience having worked closely with
+                    whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion
+                    experiences. </p>
             </div>
         </div>
     </div>
 
     <footer class="footer ">
         <div class="container">
-            <div class="row">             
+            <div class="row">
                 <div class="col-4 offset-1 col-sm-2">
                     <!--offset-1 means that this content on this div will be pushed right by one column
                      this will be applied to extra small all the way up to the extra large screen sizes. -->
                     <h5>Links</h5>
                     <ul class="list-unstyled">
                         <!-- list-unstyled removes the bullets infront of the links-->
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./aboutus.html">About</a></li>
                         <li><a href="#">Menu</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -87,13 +135,13 @@
                 <div class="col-7 col-sm-5">
                     <h5>Our Address</h5>
                     <address>
-		              121, Clear Water Bay Road<br>
-		              Clear Water Bay, Kowloon<br>
-		              HONG KONG<br>
-		              Tel.: +852 1234 5678<br>
-		              Fax: +852 8765 4321<br>
-		              Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
-		           </address>
+                        121, Clear Water Bay Road<br>
+                        Clear Water Bay, Kowloon<br>
+                        HONG KONG<br>
+                        Tel.: +852 1234 5678<br>
+                        Fax: +852 8765 4321<br>
+                        Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
+                    </address>
                 </div>
                 <div class="col-12 col-sm-4 align-self-center">
                     <!-- meaning that this will occupy a separate set of 12 columns stacked below the previous content 
@@ -108,13 +156,13 @@
                         <a href="mailto:">Mail</a>
                     </div>
                 </div>
-           </div>
-           <div class="row justify-content-center">             
+            </div>
+            <div class="row justify-content-center">
                 <div class="col-auto">
                     <!-- this content will occupy just enough columns as is required by the content there -->
                     <p>© Copyright 2018 Ristorante Con Fusion</p>
                 </div>
-           </div>
+            </div>
         </div>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
