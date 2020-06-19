@@ -1,3 +1,14 @@
+//*******************************************************************************************************************************//
+install bootstrap using this npm command
+npm install bootstrap@4.0.0 jquery@3.3.1 popper.js@1.12.9 --save 
+
+icon font toolkit 
+npm install font-awesome@4.7.0 --save
+
+Bootstrap Social that enables the addition of Social buttons
+npm install bootstrap-social@5.1.1 --save
+//*******************************************************************************************************************************//
+
 //********************************************************************************************************************************//
 since Bootstrap is dependent upon both jQuery and Popper in that order, so We will first input jQuery.
 And then after that, we input Popper, and then finally, Bootstrap min.js at the bottom of the index.html file.
@@ -78,3 +89,14 @@ Tabs
 • Tags	/	Tag	clouds
 • Scrollspy
 • Affix
+
+//*********************************************************************************************************************************//
+
+           ********************************** Bootstrap-social*************************************************
+
+<a	class="btn btn-social-icon	btn-facebook"	href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+• Uses	Bootstrap	and	Font	Awesome	icons	to	create	buttons	for	social	media	sites
+• Buttons	for	all	popular	social	media	sites
+• Include	bootstrap-social.css into	your	project
+
+//*********************************************************************************************************************************//
