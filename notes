@@ -124,3 +124,50 @@ Tabs
 • Shape of elements, apply class:
  – rounded-<top|bottom|right|left>:rounded corners
  – rounded-circle: circular image
+
+ //*****************************************************************************************************************************//
+
+            ***********************************************Badges********************************************************
+ Badges are an easy way of adding small amount of information to your website 
+ badge-pill which creates a rounded rectangle 
+
+<h2 class="media-heading">
+Uthappizza
+<span class=”badge badge-danger">HOT</span>
+<span class=”badge badge-pill badge-secondary">$4.99</span>
+</h2>
+
+//******************************************************************************************************************************//
+
+           ***************************************************Alerts********************************************************
+alert-dismissible class, allows you to include a class there which the user can click to dismiss an alert. 
+To support that operation, you need to also include a button into your alert as you can see inside this div, we included this button here
+
+<div class="alert alert-warning alert-dismissible" role="alert">
+<button type="button" class="close" data-dismiss="alert">
+  <span>&times;</span>
+</button>
+<strong>Warning:</strong>: Please<a href="tel:+85212345678" class="alert-link">call</a> us to reserve for more than six guests.
+</div>
+
+//*******************************************************************************************************************************//
+
+            **********************************************  Progress Bars ****************************************************
+creating a progress bar in bootstrap is done by applying the progress class to a div and inside that we can apply another inner div 
+with the class progress bar and also allow that to be further styled by using things like progress bar striped and then you can 
+apply the color for the progress bar by specifying the color as BG hyphen and the color. 
+So, in this case the bg-danger being applied to this progress bar. We can also make the progress part striped, 
+we can also animate the progress bar, and also specify how much of that progress bar needs to be in form.
+
+<div class="progress">
+<div class="progress-bar progress-bar-striped bg-danger"role="progressbar" style="width: 80%">80%</div>
+</div>
+
+Progress Bars
+• <div> with progress class
+– inner <div> with progress-bar class
+– style= “width:xx %” controls the size
+– progress-bar-*
+• colors: primary, danger, …
+• striped: striped appearance, also use animated for animation
+– Several can be stacked: include all inner divs in a single outer progress div
