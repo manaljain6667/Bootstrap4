@@ -100,3 +100,14 @@ Tabs
 • Include	bootstrap-social.css into	your	project
 
 //*********************************************************************************************************************************//
+            ***********************************Bootstrap	Tables*************************************************
+• Always	start	by	assigning	the	table	class	to	tables:
+  <table	class=“table”>...</table>
+• table-striped	for	zebra	striped	rows
+• table-bordered	for	borders	to	table	cells
+• table-hover for	highlighting	rows	when	you	hover	over	a	row
+• table-sm for	cutting	the	cell	padding	in	half
+• table-responsive	for	making	the	tables	responsive.	Can	horizontally	scroll	tables	on	screen	sizes	less	than	768px
+• Individual	rows	or	cells	can	be	colored	using	the	following	classes:	active,	success,	info,	warning and	danger
+   <tr class=“bg-success”>	…	</tr>
+   <td class=“bg-danger”>	…	</td>
