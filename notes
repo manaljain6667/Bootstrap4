@@ -111,3 +111,16 @@ Tabs
 • Individual	rows	or	cells	can	be	colored	using	the	following	classes:	active,	success,	info,	warning and	danger
    <tr class=“bg-success”>	…	</tr>
    <td class=“bg-danger”>	…	</td>
+
+//********************************************************************************************************************************//
+
+           ***************************************Bootstrap Image Classes********************************************
+• <img src=“…” class=“…” >
+• img-fluid for responsive images
+ – scales nicely with the parent element
+ - image class called img-fluid which will make your images responsive, meaning that the size of the image will automatically adjust to different screen sizes.
+• img-thumbnail: thumbnail image
+ -img-thumbnail will put a white border around your image.
+• Shape of elements, apply class:
+ – rounded-<top|bottom|right|left>:rounded corners
+ – rounded-circle: circular image
