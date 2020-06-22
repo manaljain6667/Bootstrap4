@@ -173,9 +173,15 @@ Progress Bars
  – Several can be stacked: include all inner divs in a single outer progress div
 
 //**************************************************************************************************************************************//
-Tabs	and	Pills
+   *******************************************Tabs	and	Pills******************************************
+
 • Navigation	elements	for	navigating	content	within	a	page	that	is	organized	into	multiple	panes
-Tabs and pills allows us to enclose content inside your web page that the user can navigate among the content without reloading the web page to a different web page.
-So if you have a certain amount of content to be presented in your web page, but want to show only part of the content on your web page, 
-but still provide user with an ability to navigate to other parts of the content, then tabs and pills can be very useful for this purpose.
-Play video starting at 1 minute 14 seconds and follow tran
+  Tabs and pills allows us to enclose content inside your web page that the user can navigate among the content without reloading the web page to 
+  a different web page.So if you have a certain amount of content to be presented in your web page, but want to show only part of the content on 
+  your web page,but still provide user with an ability to navigate to other parts of the content, then tabs and pills can be very useful for this purpose.
+
+//*************************************************************************************************************************************//
+   *******************************************The	Collapse	Plugin*************************************
+• Collapse	plugin	provides	a	quick	way	of	revealing	and	hiding	content.
+• Toggling	of	content	requires	the	use	of	a	button	or	a	link	to	trigger	the	toggle
+The Collapse plugin provides an easy way of revealing and hiding content on your web page.
