@@ -165,9 +165,17 @@ we can also animate the progress bar, and also specify how much of that progress
 
 Progress Bars
 • <div> with progress class
-– inner <div> with progress-bar class
-– style= “width:xx %” controls the size
-– progress-bar-*
+ – inner <div> with progress-bar class
+ – style= “width:xx %” controls the size
+ – progress-bar-*
 • colors: primary, danger, …
 • striped: striped appearance, also use animated for animation
-– Several can be stacked: include all inner divs in a single outer progress div
+ – Several can be stacked: include all inner divs in a single outer progress div
+
+//**************************************************************************************************************************************//
+Tabs	and	Pills
+• Navigation	elements	for	navigating	content	within	a	page	that	is	organized	into	multiple	panes
+Tabs and pills allows us to enclose content inside your web page that the user can navigate among the content without reloading the web page to a different web page.
+So if you have a certain amount of content to be presented in your web page, but want to show only part of the content on your web page, 
+but still provide user with an ability to navigate to other parts of the content, then tabs and pills can be very useful for this purpose.
+Play video starting at 1 minute 14 seconds and follow tran
