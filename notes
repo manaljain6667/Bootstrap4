@@ -185,3 +185,19 @@ Progress Bars
 • Collapse	plugin	provides	a	quick	way	of	revealing	and	hiding	content.
 • Toggling	of	content	requires	the	use	of	a	button	or	a	link	to	trigger	the	toggle
 The Collapse plugin provides an easy way of revealing and hiding content on your web page.
+
+//*************************************************************************************************************************************//
+  ****************************************Tooltips,	Popovers	and	Modals********************************
+• tooltips, popovers, and modals are a way of revealing content to the users, when the user interacts with certain elements on your web page
+  for example when the user's mouse clicks on a button, or hovers over a button, or clicks on a link, or reaches a certain point on your web page. 
+• information is displayed as an overlay on top of your web page. So the underlying content of the web page is still there, 
+  but this is laid out on top of the underlying content. 
+• Order	of	flexibility:
+    Tooltip	-> Popover	-> Modal
+
+Modal
+• More	detailed	information	can	be	presented	than	tooltips	and	popovers
+• Modal	contains	header,	body	and	footer
+• Can	use	the	Bootstrap	grid	in	the	body	to	organize	content
+
+** bootstrap advises that all modal related code be placed at the top of your page **
