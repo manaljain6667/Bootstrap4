@@ -90,6 +90,7 @@ Tabs
 • Scrollspy
 • Affix
 
+offset-1 means that this content on this div will be pushed right by one column this will be applied to extra small all the way up to the extra large screen sizes. 
 //*********************************************************************************************************************************//
 
            ********************************** Bootstrap-social*************************************************

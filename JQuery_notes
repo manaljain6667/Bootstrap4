@@ -1,0 +1,68 @@
+JQuery Syntax
+• $(selector).action()
+– $:	define/access	JQuery
+– (selector):	to	query	and	find	HTML	elements
+– action():	action	to	be	performed	on	the	element(s)
+– e.g.,	$(“p”).hide(),	$(“#mycarousel”).carousel(‘pause’)
+
+//************************************************************************************************************************//
+Bootstrap JQuery Example
+<script>
+   $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();	
+   });
+</script>
+
+$(document)  means the entire document.
+here we are specifying that select those elements for which there is an attribute with data-toggle="tooltip". 
+And then for those elements that match this criteria,perform this action called enable tooltips for those elements.
+
+//***********************************************************************************************************************//
+JQuery Selectors
+• Any	HTML	element	e.g.,	“p”,	“button”	etc.
+  When we apply a selector like this, we're saying all the elements that match this criteria will be selected.
+• Using	an	#id,	e.g.,	“#myCarousel”
+• Class,	e.g.,	“.btn”,	“.btn.btn-default”
+• Attribute,	e.g.,	“[href]”,	“[data-toggle=“tooltip”]”
+• Current	element:	$(this).
+
+//***********************************************************************************************************************//
+JQuery Events
+• User’s	interactions	on	a	web	page	causing	DOM	events:
+ – Mouse:	   click,	dblclick,	mouseenter,	mouseleave
+ – Keyboard:   keypress,	keydown,	keyup
+ – Form:	   submit,	change,	focus,	blur
+ – Document,   Window:	load,	resize,	scroll,	unload
+• JQuery Event	Methods:	e.g.,	ready(),	click(),	dblclick(),	mousedown(),	on()
+
+//***********************************************************************************************************************//
+Example:	Bootstrap	Carousel
+• Data	Attributes
+– data-slide=“prev|next”
+– data-slide-to=“0|1|2|…”
+– data-ride=“carousel”
+– data-interval=5000
+
+Example:	Carousel
+• JavaScript	based	control:
+   – $(‘.carousel’).carousel();
+   e.g. $(‘.carousel’).carousel({interval:2000});
+
+Example:	Carousel
+• Other	controls:
+– .carousel(‘cycle’):	cycle	items	left	to	right
+– .carousel(‘pause’):	stops	the	carousel
+– .carousel(number):	cycles	the	carousel	to	a	particular	frame	number	specified
+– .carousel(‘prev’):	previous	item
+– .carousel(‘next’):	next	item
+
+Example:	Carousel
+• Events:
+– slide.bs.carousel:	fires	when	the	slide	instance	method	is	invoked
+– slid.bs.carousel:	fired	when	the	carousel	has	completed	its	slides	transition
+– Use	with	the	.on()	method:
+     $(“#myCarousel”).on(‘slide.bs.carousel’, function(){
+       //	do	something
+    })
+
+meaning that when that slide action starts, then invoke this function
