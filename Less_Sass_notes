@@ -1,0 +1,64 @@
+npm install -g less@2.7.2
+
+//******************************************************************************************************************//
+CSS	Preprocessors
+• Several	popular:
+  – Less
+  – Sass	(Syntactically	Awesome	Style	Sheets),	and
+    • Scss (Sassy	CSS)
+  – Stylus
+• All	are	compiled	into	traditional	CSS	syntax	automatically	before	use	in	a	web	page
+• Bootstrap	3	used	Less,	but	Bootstrap	4	migrated	to	use	Sass
+
+//******************************************************************************************************************//
+Typical	CSS	Preprocessors	Features
+• Variables
+• Nesting	selectors
+• Mixins
+• Functions	&	Expressions
+
+//*****************************************************************************************************************//
+                                                 Variable
+    • Less                                                               • Scss
+        @lt-gray:	#ddd;                                                     $lt-gray:	#ddd;
+        @background-dark:	#512DA8;                                          $background-dark:	#512DA8;
+        @carousel-item-height:	300px;                                        $carousel-item-height:	300px;
+        
+        .navbar-inverse	{                                                      .navbar-inverse	{
+           background:@background-dark;                                            background:$background-dark;
+        }                                                                      }
+        
+        .carousel.carousel-item	{                                              .carousel.item	{
+           height:	@carousel-item-height;                                         height:  $carousel-item-height;
+       }                                                                       }
+
+variables	can	also	have	scope
+//*********************************************************************************************************************//
+                                                 Nesting 
+    • Less                                                                 • Scss
+        @background-dark:	#512DA8;                                          $background-dark:	#512DA8;
+        
+        @carousel-item-height:	300px;                                        $carousel-item-height:	300px;
+        .carousel {                                                           .carousel {
+           background:@background-dark;                                           background:$background-dark;
+            .carousel-item {                                                      .carousel-item {
+                height: @carousel-item-height;                                        height: $carousel-item-height;
+                img {                                                                 img {
+                position: absolute;                                                       position: absolute;
+                top: 0;                                                                   top :0;
+                left: 0;                                                                  left: 0;
+                min-height:	300px;                                                        min-height : 300px;
+                }                                                                      }
+           }                                                                        }                                                                      
+        }                                                                        }
+    
+//*****************************************************************************************************************//
+  see the ppts
+
+//****************************************************************************************************************//
+
+Other	Features
+• Functions:	math,	list,	string,	color,	color operations,	color	blending	etc.
+  – See	the	documentation
+• Imports
+  – e.g., in	both	Less	and	Sass:	@import	“foo”
