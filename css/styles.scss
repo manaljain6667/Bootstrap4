@@ -79,3 +79,35 @@ body{
     bottom: 0px;
     z-index: 1;
 }
+.login-header {
+    background-color: $background-dark;
+    .modal-title {
+      color: floralwhite;
+    }
+    .close {
+      color: floralwhite;
+      &:hover {
+        color: $background-pale !important;
+      }
+    }
+  }
+  
+  .login-body {
+    background-color: $background-pale;
+  }
+.reserve-header {
+    background-color: $background-dark;
+    .modal-title {
+      color: floralwhite;
+    }
+    .close {
+      color: floralwhite;
+      &:hover {
+        color: $background-pale !important;
+      }
+    }
+  }
+  
+  .reserve-body {
+    background-color: $background-pale;
+  }

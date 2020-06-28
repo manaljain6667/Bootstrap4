@@ -61,7 +61,8 @@
                     <!-- nav item allows these list items to be displayed horizontally as links in my navigation bar.  -->
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <!-- data-toggle="modal" data-target="#loginModal" alternative for javascript -->
+                    <a type="button" id="loginButton">
                     <span class="fa fa-sign-in"></span>Login</a>
                 </span>
             </div>
@@ -73,11 +74,11 @@
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header login-header">
                     <h4 class="modal-title">Login </h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body login-body">
                     <form>
                         <div class="form-row">
                             <div class="form-group col-sm-4">
@@ -108,15 +109,16 @@
 <!-- *************************************************************************************************************************************** -->
 
 <!-- **************************************************** Modal for reserve***************************************************************** -->
-    <div id="reserveModal" class="modal fade" role="dialog">
+    <div id="reserveTableModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header reserve-header" >
                     <h4 class="modal-title">Reserve a Table </h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <!-- class="close" is used for cross button. "&times" means a multiplication sign -->
+                    <button type="button" class="close"  data-dismiss="modal" >&times;</button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body reserve-body">
                     <form class="form-horizontal" role="form">
                         <div class="form-group row">
                             <label for="numberofguests" class="col-sm-2 control-label">Number of Guests</label>
@@ -208,8 +210,9 @@
                 </div>
     <!-- ***************************************************** reserve *************************************************************** -->
                 <div class="col-12 col-sm align-self-center">
-                    <button type="button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#reserveModal">
-                        Reserve Table
+                    <!-- data-toggle="modal" if we do not want javascript code -->
+                    <button type="button" class="btn btn-block nav-link btn-warning">
+                        <a type="button" class="btn btn-warning btn-block" id="reserveTableButton">Reserve Table</a>
                     </button>
                 </div>
                 
@@ -488,6 +491,16 @@
         })
     </script>
     <!-- ***************************************************************************************************** -->
+    <!-- ******************* data-* attributes of javascript **************** -->
+    <script>
+        $("#loginButton").click(function () {
+			$("#loginModal").modal('show');
+		});
+		$("#reserveTableButton").click(function () {
+			$("#reserveTableModal").modal('show');
+		});
+    </script>
+    <!-- **************************************************************** -->
 </body>
 
 </html>

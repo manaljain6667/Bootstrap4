@@ -1,5 +1,5 @@
 npm install -g less@2.7.2
-
+Bootstrap provides its source files in SCSS format.
 //******************************************************************************************************************//
 CSS	Preprocessors
 • Several	popular:

@@ -52,3 +52,27 @@ body {
   position: absolute;
   bottom: 0px;
   z-index: 1; }
+
+.login-header {
+  background-color: #512DA8; }
+  .login-header .modal-title {
+    color: floralwhite; }
+  .login-header .close {
+    color: floralwhite; }
+    .login-header .close:hover {
+      color: #D1C4E9 !important; }
+
+.login-body {
+  background-color: #D1C4E9; }
+
+.reserve-header {
+  background-color: #512DA8; }
+  .reserve-header .modal-title {
+    color: floralwhite; }
+  .reserve-header .close {
+    color: floralwhite; }
+    .reserve-header .close:hover {
+      color: #D1C4E9 !important; }
+
+.reserve-body {
+  background-color: #D1C4E9; }
