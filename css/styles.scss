@@ -14,7 +14,7 @@ $carousel-item-height: 300px;
 }
 
 //Using the variables and Mixin class that we defined earlier,
-.row-header{
+.row-header{ 
     @include zero-margin(0px,0px);
 }
 

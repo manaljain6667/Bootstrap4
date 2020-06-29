@@ -1,0 +1,18 @@
+install bootstrap using this npm command
+npm install bootstrap@4.0.0 jquery@3.3.1 popper.js@1.12.9 --save 
+
+icon font toolkit 
+npm install font-awesome@4.7.0 --save
+
+Bootstrap Social that enables the addition of Social buttons
+npm install bootstrap-social@5.1.1 --save
+
+npm install --save-dev onchange@3.3.0 parallelshell@3.0.2 
+description is in building & deployment file
+
+// add these two scripts in package.json file in scripts for the above scripts
+   "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+   "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
+
+   //also update the start script as follows:
+   "start": "npm run watch:all",

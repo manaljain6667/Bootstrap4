@@ -1,0 +1,40 @@
+Web	Development	and	Deployment
+• Web	development	and	deployment	involves	a	lot	of	repetitive	tasks
+• The	DRY	(do	not	repeat	yourself)	principle
+• Need	for	build	tools	to	automate	tasks
+
+//*****************************************************************************************************//
+CSS	Tasks
+• Compiling	Sass	or	Less	into	CSS
+• Running	Autoprefixer to	add	any	vendor	prefixes	that	are	needed
+• Minification:	removing unnecessary characters	(white	spaces,	newlines,	comments) from source code	without	compromising functionality
+• Concatenation
+   you might distribute your CSS code into many files, while you are designing and building your website. 
+   You may want to concatenate all of them into a single CSS file at the end,
+
+//******************************************************************************************************//
+JavaScript	Tasks
+• JSHint:	Checking	JavaScript	code	for	errors	and	potential	problems	(static	code	analysis)
+• Concatenation
+• Uglification:	minification +	mangling	(reduce	local	variables	to	single	letters)
+• Rechecking	for	errors
+
+//******************************************************************************************************//
+Other	Tasks
+• Images:	optimizing	files	to	reduce	file	size
+• Watch:	watching	for	changes	in	files	and	automatically	rerunning	tasks
+• Server	and	Livereload
+• Testing
+• Building	your	site	for	deployment
+
+//********************************* npm scripts ******************************************************//
+
+**npm install --save-dev onchange@3.3.0
+   This onchange module is going to watch files in my project folder, and then whenever those files change, 
+   then it automatically triggers a task to be executed. This way, for example, if I set up a quote unquote watch on some files, 
+   say for example my SCSS file, then any time I make changes to my SCSS file, it'll automatically get recompiled into the corresponding CSS file
+
+**npm install --save-dev parallelshell@3.0.2
+   This Parallelshell module allows me to execute multiple NPM scripts in Parallelshells as the name implies.
+   So this way, multiple NPM scripts can be simultaneously be executed and enable me to keep watch on various files, 
+   and also carry out other tasks
