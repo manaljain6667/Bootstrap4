@@ -1,14 +1,18 @@
 install bootstrap using this npm command
-npm install bootstrap@4.0.0 jquery@3.3.1 popper.js@1.12.9 --save 
+***npm install bootstrap@4.0.0 jquery@3.3.1 popper.js@1.12.9 --save 
 
 icon font toolkit 
-npm install font-awesome@4.7.0 --save
+***npm install font-awesome@4.7.0 --save
 
 Bootstrap Social that enables the addition of Social buttons
-npm install bootstrap-social@5.1.1 --save
+***npm install bootstrap-social@5.1.1 --save
 
-npm install --save-dev onchange@3.3.0 parallelshell@3.0.2 
-description is in building & deployment file
+***npm i node-sass
+***npm i node-less
+
+//******************description is in building & deployment file****************//
+
+***npm install --save-dev onchange@3.3.0 parallelshell@3.0.2 
 
 // add these two scripts in package.json file in scripts for the above scripts
    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
@@ -16,3 +20,25 @@ description is in building & deployment file
 
    //also update the start script as follows:
    "start": "npm run watch:all",
+
+***npm install --save-dev rimraf@2.6.2
+  //add this scripts in package.json file in scripts 
+    "clean": "rimraf dist",
+
+***npm -g install copyfiles@2.0.0
+  //"copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+
+***npm run copyfonts
+
+***npm run clean
+***npm i usemin-cli
+***npm -g install imagemin-cli@3.0.0
+   //add this scripts in package.json file in scripts 
+   "imagemin": "imagemin img/* --out-dir='dist/img'",
+
+***npm install --save-dev usemin-cli@0.5.1 cssmin@0.4.3 uglifyjs@2.4.11 htmlmin@0.0.7
+usemin-cli, cssmin, uglifyjs and htmlmin NPM packages
+  //Add the following two scripts to the package.json file:
+
+"usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
+"build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"

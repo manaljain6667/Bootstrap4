@@ -31,10 +31,86 @@ Other	Tasks
 
 **npm install --save-dev onchange@3.3.0
    This onchange module is going to watch files in my project folder, and then whenever those files change, 
-   then it automatically triggers a task to be executed. This way, for example, if I set up a quote unquote watch on some files, 
+   then it automatically triggers a task to be executed. This way, for example, if I set up "watch on some files", 
    say for example my SCSS file, then any time I make changes to my SCSS file, it'll automatically get recompiled into the corresponding CSS file
 
 **npm install --save-dev parallelshell@3.0.2
    This Parallelshell module allows me to execute multiple NPM scripts in Parallelshells as the name implies.
    So this way, multiple NPM scripts can be simultaneously be executed and enable me to keep watch on various files, 
    and also carry out other tasks
+
+//*****************************************************************************************************//
+ instead of having multiple files there, one way that deployment is done is to combine them into a single file so that 
+ one single download you get all the JavaScript code necessary for rendering your web page. 
+ One single download you get all the CSS code necessary for rendering your web page.
+
+ //***************************************************************************************************//
+ npm install --save-dev rimraf@2.6.2
+ This module helps us to clean out a folder completely.
+
+ npm -g install copyfiles@2.0.0
+      npm module called copy files which are used to copy some font files from my node modules folder into my distribution folder. 
+      So that when it is deployed, the font files also get deployed. Going to the terminal, the next package that I'm going to install is npm -g, 
+      recall that this means that it should be installed globally. 
+
+       "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+         This script is going to enable me to copy all the fonts files from my Font Awesome folder into my distribution folder. 
+         So that when my website is rendered, all these fonts files can also be sent out, 
+         such that my webpages are rendered correctly with the Font Awesome fonts in place
+
+***npm run copyfonts
+When this runs, it's going to create a folder named dist in my project folder hierarchy. 
+And then inside the dist, there will be a subfolder named fonts, which will contain the font files.
+
+***npm run clean
+this is going to delete that distribution folder. see the package.json file
+
+//***************************Compressing and Minifying Images****************************//
+***npm -g install imagemin-cli@3.0.0
+We use the imagemin-cli NPM module to help us to compress our images to reduce the size of the images being used in our project.
+
+  //add this script into package.json file
+  "imagemin": "imagemin img/* --out-dir='dist/img'",
+   since all my images are in the img folder, I would say img/*, and then then many files are going to be copied to dist image. 
+   So the original image files from the image folder that I have will be copied into the distribution folder and into the image subfolder there.
+
+  The imaginemin module will take a sect of image files and then compress them down. 
+  So it stacked the size of those files are minimized as far as possible, but still be rendered properly when our website is rendered. 
+  So this way, we will reduce the amount of data that needs to be downloaded by the browser when it needs to render our webpage. 
+  So if you are including images into your webpage, then imagemin task is something that you should learn in order tor reduce the size 
+  of your image files.
+
+//***************************************************************************************//
+npm install --save-dev usemin-cli@0.5.1 cssmin@0.4.3 uglifyjs@2.4.11 htmlmin@0.0.7
+usemin-cli, cssmin, uglifyjs and htmlmin NPM packages
+
+This usemin-cli is the one that allows me to do the transformation from my HTML file.
+And then concatenate and combine all the CSS files into a single CSS file, and then put it into the distribution folder. 
+Similarly, all the JS files will be concatenated and put into a single folder. So this usemin-cli is useful. 
+But this usemin-cli takes the help of three other node modules called the cssmin, then uglifyjs, and htmlmin. 
+So I need to install these three node modules in addition to usemin-cli. And I'm going to install this locally into my project, 
+so that's why npm install --save-def. 
+
+"usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
+"build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
+
+contactus.html -d dist, this is the syntax for specify -d dist meaning that the destination for this distribution dist folder. 
+And then I would say htmlmin, this is also going to minimize the HTML file. So it'll remove all the extraneous spaces and comments from the 
+HTML file. But they compress it down so that it contains the minimum number of characters there. 
+htmlmin, and then say -o dist/contactus.html and &&, this means that there is more to come after this. 
+Then I will say usemin then aboutus.html -d dist --htmlmin -o dist/aboutus.html. 
+So that's the second one for transforming the aboutus.html file. And then &&, this is a long script, usemin index.html, 
+we need to transform all the files. So that's why I need to specify each one explicitly there. usemin doesn't take wild cards, 
+so that's the reason why I have to specify the holding like [INAUDIBLE]. And so usemin index.html -d dist --htmlmin -o dist/index.html. 
+And then after that I put a comma because I'm going to introduce the next script, which is, Called build. 
+So this build script will create my distribution folder. So to create my distribution folder, 
+
+//***************************************************************************************//
+<!-- build:css css/main.css -->
+       this particular line is going to be used by the use menu in order to recognize the block of code that specifies all the CSS files 
+       that need to be transferred. So I say build.css, and then I will specify the filename as css/main.css. 
+       This is the syntax for specifying. What this means is that these Block of CSS files will all be combined together, 
+       and then concatenated, minified, and then put into this file called main.css. 
+<!-- endbuild -->
+  
+  whatever is between this build and endbuild, this group will be treated as a unit for being combined by our usemin npm module there
